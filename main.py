@@ -25,8 +25,7 @@ except:
 mailing_list_path   =   '/data/in/tables/' + mailing_list
 data                =   pd.read_csv(mailing_list_path)
 
-
-def get_logs(recipient, user, token, subject, begin=None):
+def get_logs(recipient, user, token, subject, begin="Mon, 01 Jan 2018 00:00:00 +0000"):
     return requests.get(
         url,
         auth=(user, token),
@@ -75,7 +74,7 @@ for index, row in data.iterrows():
 data['event'] = event
 data['date']  = event_dates
 
-data.to_csv('/data/out/tables/logs.csv')
+data.to_csv('/data/out/tables/logs.csv', index=False)
 
 
 
