@@ -13,7 +13,7 @@ user            =   par['user']
 token           =   par['#token']
 url             =   par['url']
 start           =   (datetime.datetime.today() - \
-                    datetime.timedelta(days=1)).strftime\
+                    datetime.timedelta(days=5)).strftime\
                     ('%a, %d %b %Y %H:%M:%S') + ' +0000'
 
 try:
